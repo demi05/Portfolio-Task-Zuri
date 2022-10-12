@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+  }
+main{
+    margin: 2em;
+}
+nav{
+    display: flex;
+    /* margin-right: 2em; */
+    padding: 2em;
+    border-bottom: 2px solid #000;
+}
+.current-page{
+    text-decoration: underline;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.list-one{
+    margin-right: auto;
+}
+.list-two{
+    margin-left: auto;
+}
+li{
+    margin-left: 2em;
+    font-size: 1.1rem;
+}
+.fa-bars {
+    display: none;
+  }
+.projects{
+    background-color: #3a3a3a;
+    border: none;
+    padding: 0.5em 0.75em;
+}
+.projects a{
+    color: #fff;
+}
+.projects:hover{
+    transform: translateY(2px);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    text-decoration: overline;
+}
+h2{
+    text-align: center;
+}
+.project-img-div{
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 4em;
+}
+.project-img p{
+    margin-top: 1.5em;
+    text-align: center;
+}
+img{
+    max-width: 100%;
+    border-radius: 0.35rem;
+    box-shadow: 0px 4px 30px -10px #3a3a3a;
+}
+.project-img a{
+    color: rgb(104, 80, 202);
+}
+.project-img a:hover{
+    text-decoration: underline;
+}
+footer{
+    text-align: center;
+    margin: 3em auto 0 auto;
+}
+footer p{
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 3em;
+}
+.fa-brands{
+    color: #000;
+    margin-left: 1em;
+    font-size: 1.5rem;
+}
+.fa-brands:hover{
+    color: rgb(117, 108, 108);
+}
+
+@media (min-width:750px) and (max-width:1000px){
+    .project-img p{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 750px){
+    nav{
+        padding: 1em;
+        padding-bottom: 0;
+      }
+       .list-two {
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: rgb(176, 93, 93);
+        z-index: 3;
+        place-content: center;
+        place-items: center;
+        width: 0%;
+        height: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease;
+      }  
+      .list-two.active{
+        opacity: 1;
+        pointer-events: all;
+        width: 100%;
+      }
+      .fa-bars {
+        display: block;
+        position: relative;
+        z-index: 5;
+      }
+      li{
+        margin-bottom: 1.5em;
+      }
+    .project-img-div{
+        display: block;
+    }
+    .project-img{
+        margin-bottom: 2em;
+    }
+    .project-img p{
+        font-size: 0.8rem;
+    }
+}
