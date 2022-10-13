@@ -53,11 +53,8 @@ li {
   margin-left: 2em;
   font-size: 1.1rem;
 }
-nav i{
-  display: none;
-}
 .fa-bars{
-  display: none;
+  display: none !important;
 }
 .projects {
   background-color: #3a3a3a;
@@ -172,7 +169,7 @@ footer P {
     width: 100%;
   }
   .fa-bars {
-    display: block;
+    display: block !important;
     position: relative;
     z-index: 5;
   }
